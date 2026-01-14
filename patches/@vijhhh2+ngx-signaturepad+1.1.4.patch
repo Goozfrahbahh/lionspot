@@ -1,0 +1,47 @@
+diff --git a/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signaturepad.component.d.ts b/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signaturepad.component.d.ts
+index 947c720..d462d08 100644
+--- a/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signaturepad.component.d.ts
++++ b/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signaturepad.component.d.ts
+@@ -28,5 +28,15 @@ export declare class SignaturePad implements AfterViewInit, OnDestroy {
+     onEnd(): void;
+     queryPad(): any;
+     static ɵfac: i0.ɵɵFactoryDeclaration<SignaturePad, never>;
+-    static ɵcmp: i0.ɵɵComponentDeclaration<SignaturePad, "signature-pad", never, { "options": { "alias": "options"; "required": false; }; "canvasStylesObject": { "alias": "canvasStylesObject"; "required": false; }; }, { "drawStart": "drawStart"; "drawEnd": "drawEnd"; }, never, never, false, never>;
++    static ɵcmp: i0.ɵɵComponentDeclaration<
++  SignaturePad,
++  "signature-pad",
++  never,
++  { "options": "options"; "canvasStylesObject": "canvasStylesObject"; },
++  { "drawStart": "drawStart"; "drawEnd": "drawEnd"; },
++  never,
++  never,
++  false,
++  never
++>;
+ }
+diff --git a/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signauturepad-control/angular2-signauturepad-control.component.d.ts b/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signauturepad-control/angular2-signauturepad-control.component.d.ts
+index 6a6c25d..9961fd4 100644
+--- a/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signauturepad-control/angular2-signauturepad-control.component.d.ts
++++ b/node_modules/@vijhhh2/ngx-signaturepad/lib/angular2-signauturepad-control/angular2-signauturepad-control.component.d.ts
+@@ -43,5 +43,20 @@ export declare class SignaturePadControl implements AfterViewInit, OnInit, Contr
+     disableCanvas(): void;
+     enableCanvas(): void;
+     static ɵfac: i0.ɵɵFactoryDeclaration<SignaturePadControl, [null, { optional: true; host: true; skipSelf: true; }]>;
+-    static ɵcmp: i0.ɵɵComponentDeclaration<SignaturePadControl, "signature-pad-control", never, { "formControlName": { "alias": "formControlName"; "required": false; }; "options": { "alias": "options"; "required": false; }; "exportType": { "alias": "exportType"; "required": false; }; "canvasStylesObject": { "alias": "canvasStylesObject"; "required": false; }; }, { "drawStart": "drawStart"; "drawEnd": "drawEnd"; }, never, never, false, never>;
++    static ɵcmp: i0.ɵɵComponentDeclaration<
++  SignaturePadControl,
++  "signature-pad-control",
++  never,
++  {
++    "formControlName": "formControlName";
++    "options": "options";
++    "exportType": "exportType";
++    "canvasStylesObject": "canvasStylesObject";
++  },
++  { "drawStart": "drawStart"; "drawEnd": "drawEnd"; },
++  never,
++  never,
++  false,
++  never
++>;
+ }

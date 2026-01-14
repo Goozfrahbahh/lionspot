@@ -1,0 +1,263 @@
+# diff --git a/node_modules/ngx-signaturepad/__ivy_ngcc__/index.js b/node_modules/ngx-signaturepad/__ivy_ngcc__/index.js
+# new file mode 100644
+# index 0000000..76d02ee
+# --- /dev/null
+# +++ b/node_modules/ngx-signaturepad/__ivy_ngcc__/index.js
+# @@ -0,0 +1,25 @@
+# +"use strict";
+# +Object.defineProperty(exports, "__esModule", { value: true });
+# +exports.SignaturePadModule = void 0;
+# +var core_1 = require("@angular/core");
+# +var signature_pad_1 = require("./signature-pad");
+# +var i0 = require("@angular/core");
+# +var SignaturePadModule = /** @class */ (function () {
+# +    function SignaturePadModule() {
+# +    }
+# +    SignaturePadModule.ɵfac = function SignaturePadModule_Factory(t) { return new (t || SignaturePadModule)(); };
+# +    SignaturePadModule.ɵmod = i0.ɵɵdefineNgModule({ type: SignaturePadModule });
+# +    SignaturePadModule.ɵinj = i0.ɵɵdefineInjector({ imports: [[]] });
+# +    return SignaturePadModule;
+# +}());
+# +exports.SignaturePadModule = SignaturePadModule;
+# +(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SignaturePadModule, { declarations: [signature_pad_1.SignaturePad], exports: [signature_pad_1.SignaturePad] }); })();
+# +(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SignaturePadModule, [{
+# +        type: core_1.NgModule,
+# +        args: [{
+# +                imports: [],
+# +                declarations: [signature_pad_1.SignaturePad],
+# +                exports: [signature_pad_1.SignaturePad],
+# +            }]
+# +    }], null, null); })();
+# +//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLHNDQUF5QztBQUN6QyxpREFBK0M7QUFFL0M7QUFBQTtBQUUyQixJQUYzQjtBQUVLLEtBSThCO0FBQ2xDLHdGQURZLGtCQUFrQjtBQUMzQiwwREFEUyxrQkFBa0I7QUFDOUIsOERBTlUsRUFBRztBQUNULDZCQUxMO0FBQUcsQ0FTZ0MsQUFObkMsSUFNbUM7QUFBdEIsZ0RBQWtCO0FBQUUsd0ZBQXBCLGtCQUFrQixtQkFKYiw0QkFBWSxhQUNqQiw0QkFBWTtBQUdwQix1RkFBUSxrQkFBa0I7QUFDOUIsY0FQQSxlQUFRO0FBQ1QsZUFEVTtBQUNULGdCQUFDLE9BQU8sRUFBRSxFQUFHO0FBQ2IsZ0JBQUMsWUFBWSxFQUFFLENBQUUsNEJBQVksQ0FBRTtBQUMvQixnQkFBQyxPQUFPLEVBQUUsQ0FBRSw0QkFBWSxDQUFFO0FBQzFCLGFBQUE7O0FBUEEsQUFBQSxBQUNBLEFBQUEsQUFFQSxBQUFBLEFBTUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUxBLEFBQUEsQUFKQSxBQVNBLEFBTkEsQUFNQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBSkEsQUFBQSxBQUNBLEFBQUEsQUFHQSxBQUFBLEFBTkEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBTaWduYXR1cmVQYWQgfSBmcm9tICcuL3NpZ25hdHVyZS1wYWQnO1xuXG5ATmdNb2R1bGUoe1xuICBpbXBvcnRzOiBbIF0sXG4gIGRlY2xhcmF0aW9uczogWyBTaWduYXR1cmVQYWQgXSxcbiAgZXhwb3J0czogWyBTaWduYXR1cmVQYWQgXSxcbn0pXG5cbmV4cG9ydCBjbGFzcyBTaWduYXR1cmVQYWRNb2R1bGUgeyB9XG4iXX0=
+# \ No newline at end of file
+# diff --git a/node_modules/ngx-signaturepad/__ivy_ngcc__/signature-pad.js b/node_modules/ngx-signaturepad/__ivy_ngcc__/signature-pad.js
+# new file mode 100644
+# index 0000000..7b98cfc
+# --- /dev/null
+# +++ b/node_modules/ngx-signaturepad/__ivy_ngcc__/signature-pad.js
+# @@ -0,0 +1,120 @@
+# +"use strict";
+# +Object.defineProperty(exports, "__esModule", { value: true });
+# +exports.SignaturePad = void 0;
+# +var core_1 = require("@angular/core");
+# +var i0 = require("@angular/core");
+# +'use strict';
+# +var ɵngcc0 = require('@angular/core');
+# +var SignaturePad = /** @class */ (function () {
+# +    function SignaturePad(elementRef) {
+# +        // no op
+# +        this.elementRef = elementRef;
+# +        this.options = this.options || {};
+# +        this.onBeginEvent = new core_1.EventEmitter();
+# +        this.onEndEvent = new core_1.EventEmitter();
+# +    }
+# +    SignaturePad.prototype.ngAfterContentInit = function () {
+# +        var sp = require('signature_pad')['default']; //
+# +        var canvas = this.elementRef.nativeElement.querySelector('canvas');
+# +        if (this.options['canvasHeight']) {
+# +            canvas.height = this.options['canvasHeight'];
+# +        }
+# +        if (this.options['canvasWidth']) {
+# +            canvas.width = this.options['canvasWidth'];
+# +        }
+# +        this.signaturePad = new sp(canvas, this.options);
+# +        this.signaturePad.onBegin = this.onBegin.bind(this);
+# +        this.signaturePad.onEnd = this.onEnd.bind(this);
+# +    };
+# +    SignaturePad.prototype.resizeCanvas = function () {
+# +        // When zoomed out to less than 100%, for some very strange reason,
+# +        // some browsers report devicePixelRatio as less than 1
+# +        // and only part of the canvas is cleared then.
+# +        var ratio = Math.max(window.devicePixelRatio || 1, 1);
+# +        var canvas = this.signaturePad._canvas;
+# +        canvas.width = canvas.offsetWidth * ratio;
+# +        canvas.height = canvas.offsetHeight * ratio;
+# +        canvas.getContext('2d').scale(ratio, ratio);
+# +        this.signaturePad.clear(); // otherwise isEmpty() might return incorrect value
+# +    };
+# +    // Returns signature image as an array of point groups
+# +    SignaturePad.prototype.toData = function () {
+# +        return this.signaturePad.toData();
+# +    };
+# +    // Draws signature image from an array of point groups
+# +    SignaturePad.prototype.fromData = function (points) {
+# +        this.signaturePad.fromData(points);
+# +    };
+# +    // Returns signature image as data URL (see https://mdn.io/todataurl for the list of possible paramters)
+# +    SignaturePad.prototype.toDataURL = function (imageType, quality) {
+# +        return this.signaturePad.toDataURL(imageType, quality); // save image as data URL
+# +    };
+# +    // Draws signature image from data URL
+# +    SignaturePad.prototype.fromDataURL = function (dataURL, options) {
+# +        if (options === void 0) { options = {}; }
+# +        this.signaturePad.fromDataURL(dataURL, options);
+# +    };
+# +    // Clears the canvas
+# +    SignaturePad.prototype.clear = function () {
+# +        this.signaturePad.clear();
+# +    };
+# +    // Returns true if canvas is empty, otherwise returns false
+# +    SignaturePad.prototype.isEmpty = function () {
+# +        return this.signaturePad.isEmpty();
+# +    };
+# +    // Unbinds all event handlers
+# +    SignaturePad.prototype.off = function () {
+# +        this.signaturePad.off();
+# +    };
+# +    // Rebinds all event handlers
+# +    SignaturePad.prototype.on = function () {
+# +        this.signaturePad.on();
+# +    };
+# +    // set an option on the signaturePad - e.g. set('minWidth', 50);
+# +    SignaturePad.prototype.set = function (option, value) {
+# +        switch (option) {
+# +            case 'canvasHeight':
+# +                this.signaturePad._canvas.height = value;
+# +                break;
+# +            case 'canvasWidth':
+# +                this.signaturePad._canvas.width = value;
+# +                break;
+# +            default:
+# +                this.signaturePad[option] = value;
+# +        }
+# +    };
+# +    // notify subscribers on signature begin
+# +    SignaturePad.prototype.onBegin = function () {
+# +        this.onBeginEvent.emit(true);
+# +    };
+# +    // notify subscribers on signature end
+# +    SignaturePad.prototype.onEnd = function () {
+# +        this.onEndEvent.emit(true);
+# +    };
+# +    SignaturePad.prototype.queryPad = function () {
+# +        return this.signaturePad;
+# +    };
+# +    SignaturePad.ɵfac = function SignaturePad_Factory(t) { return new (t || SignaturePad)(i0.ɵɵdirectiveInject(i0.ElementRef)); };
+# +    SignaturePad.ɵcmp = i0.ɵɵdefineComponent({ type: SignaturePad, selectors: [["signature-pad"]], inputs: { options: "options" }, outputs: { onBeginEvent: "onBeginEvent", onEndEvent: "onEndEvent" }, decls: 1, vars: 0, template: function SignaturePad_Template(rf, ctx) { if (rf & 1) {
+# +            i0.ɵɵelement(0, "canvas");
+# +        } }, encapsulation: 2 });
+# +SignaturePad.ɵfac = function SignaturePad_Factory(t) { ɵngcc0.ɵɵinvalidFactory(); };
+# +SignaturePad.ɵdir = /*@__PURE__*/ ɵngcc0.ɵɵdefineDirective({ type: SignaturePad });
+# +
+# +    return SignaturePad;
+# +}());
+# +exports.SignaturePad = SignaturePad;
+# +(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SignaturePad, [{
+# +        type: core_1.Component,
+# +        args: [{
+# +                template: '<canvas></canvas>',
+# +                selector: 'signature-pad',
+# +            }]
+# +    }], function () { return [{ type: i0.ElementRef }]; }, { options: [{
+# +            type: core_1.Input
+# +        }], onBeginEvent: [{
+# +            type: core_1.Output
+# +        }], onEndEvent: [{
+# +            type: core_1.Output
+# +        }] }); })();
+# +//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2lnbmF0dXJlLXBhZC5qcyIsInNvdXJjZXMiOlsic2lnbmF0dXJlLXBhZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFFQSxzQ0FBbUY7QUFDbkY7QUFIQSxZQUFZLENBQUM7O0FBY2I7QUFFQyxJQVlDLHNCQUFZLFVBQXNCO0FBQ3BDLFFBQUksUUFBUTtBQUNaLFFBQUksSUFBSSxDQUFDLFVBQVUsR0FBRyxVQUFVLENBQUM7QUFDakMsUUFBSSxJQUFJLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQyxPQUFPLElBQUksRUFBRSxDQUFDO0FBQ3RDLFFBQUksSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLG1CQUFZLEVBQUUsQ0FBQztBQUMzQyxRQUFJLElBQUksQ0FBQyxVQUFVLEdBQUcsSUFBSSxtQkFBWSxFQUFFLENBQUM7QUFDekMsSUFBRSxDQUFDO0FBQ0gsSUFDUyx5Q0FBa0IsR0FBekI7QUFBZSxRQUNiLElBQUksRUFBRSxHQUFRLE9BQU8sQ0FBQyxlQUFlLENBQUMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLEVBQUU7QUFDekQsUUFBSSxJQUFJLE1BQU0sR0FBUSxJQUFJLENBQUMsVUFBVSxDQUFDLGFBQWEsQ0FBQyxhQUFhLENBQUMsUUFBUSxDQUFDLENBQUM7QUFDNUUsUUFDSSxJQUFVLElBQUksQ0FBQyxPQUFRLENBQUMsY0FBYyxDQUFDLEVBQUU7QUFDN0MsWUFBTSxNQUFNLENBQUMsTUFBTSxHQUFTLElBQUksQ0FBQyxPQUFRLENBQUMsY0FBYyxDQUFDLENBQUM7QUFDMUQsU0FBSztBQUNMLFFBQ0ksSUFBVSxJQUFJLENBQUMsT0FBUSxDQUFDLGFBQWEsQ0FBQyxFQUFFO0FBQzVDLFlBQU0sTUFBTSxDQUFDLEtBQUssR0FBUyxJQUFJLENBQUMsT0FBUSxDQUFDLGFBQWEsQ0FBQyxDQUFDO0FBQ3hELFNBQUs7QUFDTCxRQUNJLElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxFQUFFLENBQUMsTUFBTSxFQUFFLElBQUksQ0FBQyxPQUFPLENB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Q0EsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFFQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBRUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFFQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUVBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBRUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUNBLEFBQUEsQUFDQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFFQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUVBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBRUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUVBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUVBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUVBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBRUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBRUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBRUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQ0EsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQ0EsQUFBQSxBQUVBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFFQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBRUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQWhIQSxBQUFBLEFBQUEsQUFBQSxBQUpBLEFBQUEsQUFmQSxBQW9JQSxBQXRIQSxBQXNIQSxBQWpIQSxBQUFBLEFBQUEsQUFBQSxBQUxBLEFBQUEsQUFBQSxBQUNBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUlBLEFBQUEsQUFBQSxBQUFBLEFBQ0EsQUFBQSxBQUFBLEFBQUEsQUFDQSxBQUFBLEFBQUEsQUFBQSIsInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcclxuXHJcbmltcG9ydCB7IENvbXBvbmVudCwgRWxlbWVudFJlZiwgRXZlbnRFbWl0dGVyLCBJbnB1dCwgT3V0cHV0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcblxyXG5kZWNsYXJlIHZhciByZXF1aXJlOiBhbnk7XHJcblxyXG5leHBvcnQgaW50ZXJmYWNlIFBvaW50IHtcclxuICB4OiBudW1iZXI7XHJcbiAgeTogbnVtYmVyO1xyXG4gIHRpbWU6IG51bWJlcjtcclxufVxyXG5cclxuZXhwb3J0IHR5cGUgUG9pbnRHcm91cCA9IEFycmF5PFBvaW50PjtcclxuXHJcbkBDb21wb25lbnQoe1xyXG4gIHRlbXBsYXRlOiAnPGNhbnZhcz48L2NhbnZhcz4nLFxyXG4gIHNlbGVjdG9yOiAnc2lnbmF0dXJlLXBhZCcsXHJcbn0pXHJcblxyXG5leHBvcnQgY2xhc3MgU2lnbmF0dXJlUGFkIHtcclxuXHJcbiAgQElucHV0KCkgcHVibGljIG9wdGlvbnM6IE9iamVjdDtcclxuICBAT3V0cHV0KCkgcHVibGljIG9uQmVnaW5FdmVudDogRXZlbnRFbWl0dGVyPGJvb2xlYW4+O1xyXG4gIEBPdXRwdXQoKSBwdWJsaWMgb25FbmRFdmVudDogRXZlbnRFbWl0dGVyPGJvb2xlYW4+O1xyXG5cclxuICBwcml2YXRlIHNpZ25hdHVyZVBhZDogYW55O1xyXG4gIHByaXZhdGUgZWxlbWVudFJlZjogRWxlbWVudFJlZjtcclxuXHJcbiAgY29uc3RydWN0b3IoZWxlbWVudFJlZjogRWxlbWVudFJlZikge1xyXG4gICAgLy8gbm8gb3BcclxuICAgIHRoaXMuZWxlbWVudFJlZiA9IGVsZW1lbnRSZWY7XHJcbiAgICB0aGlzLm9wdGlvbnMgPSB0aGlzLm9wdGlvbnMgfHwge307XHJcbiAgICB0aGlzLm9uQmVnaW5FdmVudCA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcclxuICAgIHRoaXMub25FbmRFdmVudCA9IG5ldyBFdmVudEVtaXR0ZXIoKTtcclxuICB9XHJcblxyXG4gIHB1YmxpYyBuZ0FmdGVyQ29udGVudEluaXQoKTogdm9pZCB7XHJcbiAgICBsZXQgc3A6IGFueSA9IHJlcXVpcmUoJ3NpZ25hdHVyZV9wYWQnKVsnZGVmYXVsdCddOyAvL1xyXG4gICAgbGV0IGNhbnZhczogYW55ID0gdGhpcy5lbGVtZW50UmVmLm5hdGl2ZUVsZW1lbnQucXVlcnlTZWxlY3RvcignY2FudmFzJyk7XHJcblxyXG4gICAgaWYgKCg8YW55PnRoaXMub3B0aW9ucylbJ2NhbnZhc0hlaWdodCddKSB7XHJcbiAgICAgIGNhbnZhcy5oZWlnaHQgPSAoPGFueT50aGlzLm9wdGlvbnMpWydjYW52YXNIZWlnaHQnXTtcclxuICAgIH1cclxuXHJcbiAgICBpZiAoKDxhbnk+dGhpcy5vcHRpb25zKVsnY2FudmFzV2lkdGgnXSkge1xyXG4gICAgICBjYW52YXMud2lkdGggPSAoPGFueT50aGlzLm9wdGlvbnMpWydjYW52YXNXaWR0aCddO1xyXG4gICAgfVxyXG5cclxuICAgIHRoaXMuc2lnbmF0dXJlUGFkID0gbmV3IHNwKGNhbnZhcywgdGhpcy5vcHRpb25zKTtcclxuICAgIHRoaXMuc2lnbmF0dXJlUGFkLm9uQmVnaW4gPSB0aGlzLm9uQmVnaW4uYmluZCh0aGlzKTtcclxuICAgIHRoaXMuc2lnbmF0dXJlUGFkLm9uRW5kID0gdGhpcy5vbkVuZC5iaW5kKHRoaXMpO1xyXG4gIH1cclxuXHJcbiAgcHVibGljIHJlc2l6ZUNhbnZhcygpOiB2b2lkIHtcclxuICAgIC8vIFdoZW4gem9vbWVkIG91dCB0byBsZXNzIHRoYW4gMTAwJSwgZm9yIHNvbWUgdmVyeSBzdHJhbmdlIHJlYXNvbixcclxuICAgIC8vIHNvbWUgYnJvd3NlcnMgcmVwb3J0IGRldmljZVBpeGVsUmF0aW8gYXMgbGVzcyB0aGFuIDFcclxuICAgIC8vIGFuZCBvbmx5IHBhcnQgb2YgdGhlIGNhbnZhcyBpcyBjbGVhcmVkIHRoZW4uXHJcbiAgICBjb25zdCByYXRpbzogbnVtYmVyID0gTWF0aC5tYXgod2luZG93LmRldmljZVBpeGVsUmF0aW8gfHwgMSwgMSk7XHJcbiAgICBjb25zdCBjYW52YXM6IGFueSA9IHRoaXMuc2lnbmF0dXJlUGFkLl9jYW52YXM7XHJcbiAgICBjYW52YXMud2lkdGggPSBjYW52YXMub2Zmc2V0V2lkdGggKiByYXRpbztcclxuICAgIGNhbnZhcy5oZWlnaHQgPSBjYW52YXMub2Zmc2V0SGVpZ2h0ICogcmF0aW87XHJcbiAgICBjYW52YXMuZ2V0Q29udGV4dCgnMmQnKS5zY2FsZShyYXRpbywgcmF0aW8pO1xyXG4gICAgdGhpcy5zaWduYXR1cmVQYWQuY2xlYXIoKTsgLy8gb3RoZXJ3aXNlIGlzRW1wdHkoKSBtaWdodCByZXR1cm4gaW5jb3JyZWN0IHZhbHVlXHJcbiAgfVxyXG5cclxuICAgLy8gUmV0dXJucyBzaWduYXR1cmUgaW1hZ2UgYXMgYW4gYXJyYXkgb2YgcG9pbnQgZ3JvdXBzXHJcbiAgcHVibGljIHRvRGF0YSgpOiBBcnJheTxQb2ludEdyb3VwPiB7XHJcbiAgICByZXR1cm4gdGhpcy5zaWduYXR1cmVQYWQudG9EYXRhKCk7XHJcbiAgfVxyXG5cclxuICAvLyBEcmF3cyBzaWduYXR1cmUgaW1hZ2UgZnJvbSBhbiBhcnJheSBvZiBwb2ludCBncm91cHNcclxuICBwdWJsaWMgZnJvbURhdGEocG9pbnRzOiBBcnJheTxQb2ludEdyb3VwPik6IHZvaWQge1xyXG4gICAgdGhpcy5zaWduYXR1cmVQYWQuZnJvbURhdGEocG9pbnRzKTtcclxuICB9XHJcblxyXG4gIC8vIFJldHVybnMgc2lnbmF0dXJlIGltYWdlIGFzIGRhdGEgVVJMIChzZWUgaHR0cHM6Ly9tZG4uaW8vdG9kYXRhdXJsIGZvciB0aGUgbGlzdCBvZiBwb3NzaWJsZSBwYXJhbXRlcnMpXHJcbiAgcHVibGljIHRvRGF0YVVSTChpbWFnZVR5cGU/OiBzdHJpbmcsIHF1YWxpdHk/OiBudW1iZXIpOiBzdHJpbmcge1xyXG4gICAgcmV0dXJuIHRoaXMuc2lnbmF0dXJlUGFkLnRvRGF0YVVSTChpbWFnZVR5cGUsIHF1YWxpdHkpOyAvLyBzYXZlIGltYWdlIGFzIGRhdGEgVVJMXHJcbiAgfVxyXG5cclxuICAvLyBEcmF3cyBzaWduYXR1cmUgaW1hZ2UgZnJvbSBkYXRhIFVSTFxyXG4gIHB1YmxpYyBmcm9tRGF0YVVSTChkYXRhVVJMOiBzdHJpbmcsIG9wdGlvbnM6IE9iamVjdCA9IHt9KTogdm9pZCB7XHJcbiAgICB0aGlzLnNpZ25hdHVyZVBhZC5mcm9tRGF0YVVSTChkYXRhVVJMLCBvcHRpb25zKTtcclxuICB9XHJcblxyXG4gIC8vIENsZWFycyB0aGUgY2FudmFzXHJcbiAgcHVibGljIGNsZWFyKCk6IHZvaWQge1xyXG4gICAgdGhpcy5zaWduYXR1cmVQYWQuY2xlYXIoKTtcclxuICB9XHJcblxyXG4gIC8vIFJldHVybnMgdHJ1ZSBpZiBjYW52YXMgaXMgZW1wdHksIG90aGVyd2lzZSByZXR1cm5zIGZhbHNlXHJcbiAgcHVibGljIGlzRW1wdHkoKTogYm9vbGVhbiB7XHJcbiAgICByZXR1cm4gdGhpcy5zaWduYXR1cmVQYWQuaXNFbXB0eSgpO1xyXG4gIH1cclxuXHJcbiAgLy8gVW5iaW5kcyBhbGwgZXZlbnQgaGFuZGxlcnNcclxuICBwdWJsaWMgb2ZmKCk6IHZvaWQge1xyXG4gICAgdGhpcy5zaWduYXR1cmVQYWQub2ZmKCk7XHJcbiAgfVxyXG5cclxuICAvLyBSZWJpbmRzIGFsbCBldmVudCBoYW5kbGVyc1xyXG4gIHB1YmxpYyBvbigpOiB2b2lkIHtcclxuICAgIHRoaXMuc2lnbmF0dXJlUGFkLm9uKCk7XHJcbiAgfVxyXG5cclxuICAvLyBzZXQgYW4gb3B0aW9uIG9uIHRoZSBzaWduYXR1cmVQYWQgLSBlLmcuIHNldCgnbWluV2lkdGgnLCA1MCk7XHJcbiAgcHVibGljIHNldChvcHRpb246IHN0cmluZywgdmFsdWU6IGFueSk6IHZvaWQge1xyXG4gICAgc3dpdGNoIChvcHRpb24pIHtcclxuICAgICAgY2FzZSAnY2FudmFzSGVpZ2h0JzpcclxuICAgICAgICB0aGlzLnNpZ25hdHVyZVBhZC5fY2FudmFzLmhlaWdodCA9IHZhbHVlO1xyXG4gICAgICAgIGJyZWFrO1xyXG4gICAgICBjYXNlICdjYW52YXNXaWR0aCc6XHJcbiAgICAgICAgdGhpcy5zaWduYXR1cmVQYWQuX2NhbnZhcy53aWR0aCA9IHZhbHVlO1xyXG4gICAgICAgIGJyZWFrO1xyXG4gICAgICBkZWZhdWx0OlxyXG4gICAgICAgIHRoaXMuc2lnbmF0dXJlUGFkW29wdGlvbl0gPSB2YWx1ZTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC8vIG5vdGlmeSBzdWJzY3JpYmVycyBvbiBzaWduYXR1cmUgYmVnaW5cclxuICBwdWJsaWMgb25CZWdpbigpOiB2b2lkIHtcclxuICAgIHRoaXMub25CZWdpbkV2ZW50LmVtaXQodHJ1ZSk7XHJcbiAgfVxyXG5cclxuICAvLyBub3RpZnkgc3Vic2NyaWJlcnMgb24gc2lnbmF0dXJlIGVuZFxyXG4gIHB1YmxpYyBvbkVuZCgpOiB2b2lkIHtcclxuICAgIHRoaXMub25FbmRFdmVudC5lbWl0KHRydWUpO1xyXG4gIH1cclxuXHJcbiAgcHVibGljIHF1ZXJ5UGFkKCk6IGFueSB7XHJcbiAgICAgIHJldHVybiB0aGlzLnNpZ25hdHVyZVBhZDtcclxuICB9XHJcbn1cclxuIl19
+# \ No newline at end of file
+# diff --git a/node_modules/ngx-signaturepad/index.d.ts b/node_modules/ngx-signaturepad/index.d.ts
+# index 51bd9d7..31ae3c7 100644
+# --- a/node_modules/ngx-signaturepad/index.d.ts
+# +++ b/node_modules/ngx-signaturepad/index.d.ts
+# @@ -1,7 +1,10 @@
+#  import * as i0 from "@angular/core";
+#  import * as i1 from "./signature-pad";
+# +export * from './signature-pad';
+#  export declare class SignaturePadModule {
+#      static ɵfac: i0.ɵɵFactoryDef<SignaturePadModule, never>;
+#      static ɵmod: i0.ɵɵNgModuleDefWithMeta<SignaturePadModule, [typeof i1.SignaturePad], never, [typeof i1.SignaturePad]>;
+#      static ɵinj: i0.ɵɵInjectorDef<SignaturePadModule>;
+#  }
+# +
+# +//# sourceMappingURL=index.d.ts.map
+# \ No newline at end of file
+# diff --git a/node_modules/ngx-signaturepad/index.d.ts.__ivy_ngcc_bak b/node_modules/ngx-signaturepad/index.d.ts.__ivy_ngcc_bak
+# new file mode 100644
+# index 0000000..51bd9d7
+# --- /dev/null
+# +++ b/node_modules/ngx-signaturepad/index.d.ts.__ivy_ngcc_bak
+# @@ -0,0 +1,7 @@
+# +import * as i0 from "@angular/core";
+# +import * as i1 from "./signature-pad";
+# +export declare class SignaturePadModule {
+# +    static ɵfac: i0.ɵɵFactoryDef<SignaturePadModule, never>;
+# +    static ɵmod: i0.ɵɵNgModuleDefWithMeta<SignaturePadModule, [typeof i1.SignaturePad], never, [typeof i1.SignaturePad]>;
+# +    static ɵinj: i0.ɵɵInjectorDef<SignaturePadModule>;
+# +}
+# diff --git a/node_modules/ngx-signaturepad/index.d.ts.map b/node_modules/ngx-signaturepad/index.d.ts.map
+# new file mode 100644
+# index 0000000..36f7d1e
+# --- /dev/null
+# +++ b/node_modules/ngx-signaturepad/index.d.ts.map
+# @@ -0,0 +1 @@
+# +{"version":3,"file":"index.d.ts","sources":["index.d.ts"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA","sourcesContent":["import * as i0 from \"@angular/core\";\r\nimport * as i1 from \"./signature-pad\";\r\nexport declare class SignaturePadModule {\r\n    static ɵfac: i0.ɵɵFactoryDef<SignaturePadModule, never>;\r\n    static ɵmod: i0.ɵɵNgModuleDefWithMeta<SignaturePadModule, [typeof i1.SignaturePad], never, [typeof i1.SignaturePad]>;\r\n    static ɵinj: i0.ɵɵInjectorDef<SignaturePadModule>;\r\n}\r\n"]}
+# \ No newline at end of file
+# diff --git a/node_modules/ngx-signaturepad/signature-pad.d.ts b/node_modules/ngx-signaturepad/signature-pad.d.ts
+# index 36f4428..b23679a 100644
+# --- a/node_modules/ngx-signaturepad/signature-pad.d.ts
+# +++ b/node_modules/ngx-signaturepad/signature-pad.d.ts
+# @@ -1,5 +1,6 @@
+#  import { ElementRef, EventEmitter } from '@angular/core';
+#  import * as i0 from "@angular/core";
+# +import * as ɵngcc0 from '@angular/core';
+#  export interface Point {
+#      x: number;
+#      y: number;
+# @@ -29,4 +30,8 @@ export declare class SignaturePad {
+#      queryPad(): any;
+#      static ɵfac: i0.ɵɵFactoryDef<SignaturePad, never>;
+#      static ɵcmp: i0.ɵɵComponentDefWithMeta<SignaturePad, "signature-pad", never, { "options": "options"; }, { "onBeginEvent": "onBeginEvent"; "onEndEvent": "onEndEvent"; }, never, never>;
+# +    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<SignaturePad, never>;
+# +    static ɵdir: ɵngcc0.ɵɵDirectiveDeclaration<SignaturePad, never, never, {}, {}, never, never, false, never>;
+#  }
+# +
+# +//# sourceMappingURL=signature-pad.d.ts.map
+# \ No newline at end of file
+# diff --git a/node_modules/ngx-signaturepad/signature-pad.d.ts.__ivy_ngcc_bak b/node_modules/ngx-signaturepad/signature-pad.d.ts.__ivy_ngcc_bak
+# new file mode 100644
+# index 0000000..36f4428
+# --- /dev/null
+# +++ b/node_modules/ngx-signaturepad/signature-pad.d.ts.__ivy_ngcc_bak
+# @@ -0,0 +1,32 @@
+# +import { ElementRef, EventEmitter } from '@angular/core';
+# +import * as i0 from "@angular/core";
+# +export interface Point {
+# +    x: number;
+# +    y: number;
+# +    time: number;
+# +}
+# +export declare type PointGroup = Array<Point>;
+# +export declare class SignaturePad {
+# +    options: Object;
+# +    onBeginEvent: EventEmitter<boolean>;
+# +    onEndEvent: EventEmitter<boolean>;
+# +    private signaturePad;
+# +    private elementRef;
+# +    constructor(elementRef: ElementRef);
+# +    ngAfterContentInit(): void;
+# +    resizeCanvas(): void;
+# +    toData(): Array<PointGroup>;
+# +    fromData(points: Array<PointGroup>): void;
+# +    toDataURL(imageType?: string, quality?: number): string;
+# +    fromDataURL(dataURL: string, options?: Object): void;
+# +    clear(): void;
+# +    isEmpty(): boolean;
+# +    off(): void;
+# +    on(): void;
+# +    set(option: string, value: any): void;
+# +    onBegin(): void;
+# +    onEnd(): void;
+# +    queryPad(): any;
+# +    static ɵfac: i0.ɵɵFactoryDef<SignaturePad, never>;
+# +    static ɵcmp: i0.ɵɵComponentDefWithMeta<SignaturePad, "signature-pad", never, { "options": "options"; }, { "onBeginEvent": "onBeginEvent"; "onEndEvent": "onEndEvent"; }, never, never>;
+# +}
+# diff --git a/node_modules/ngx-signaturepad/signature-pad.d.ts.map b/node_modules/ngx-signaturepad/signature-pad.d.ts.map
+# new file mode 100644
+# index 0000000..ef4ff37
+# --- /dev/null
+# +++ b/node_modules/ngx-signaturepad/signature-pad.d.ts.map
+# @@ -0,0 +1 @@
+# +{"version":3,"file":"signature-pad.d.ts","sources":["signature-pad.d.ts"],"names":[],"mappings":"AAAA;AACA;;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;;AACA","sourcesContent":["import { ElementRef, EventEmitter } from '@angular/core';\r\nimport * as i0 from \"@angular/core\";\r\nexport interface Point {\r\n    x: number;\r\n    y: number;\r\n    time: number;\r\n}\r\nexport declare type PointGroup = Array<Point>;\r\nexport declare class SignaturePad {\r\n    options: Object;\r\n    onBeginEvent: EventEmitter<boolean>;\r\n    onEndEvent: EventEmitter<boolean>;\r\n    private signaturePad;\r\n    private elementRef;\r\n    constructor(elementRef: ElementRef);\r\n    ngAfterContentInit(): void;\r\n    resizeCanvas(): void;\r\n    toData(): Array<PointGroup>;\r\n    fromData(points: Array<PointGroup>): void;\r\n    toDataURL(imageType?: string, quality?: number): string;\r\n    fromDataURL(dataURL: string, options?: Object): void;\r\n    clear(): void;\r\n    isEmpty(): boolean;\r\n    off(): void;\r\n    on(): void;\r\n    set(option: string, value: any): void;\r\n    onBegin(): void;\r\n    onEnd(): void;\r\n    queryPad(): any;\r\n    static ɵfac: i0.ɵɵFactoryDef<SignaturePad, never>;\r\n    static ɵcmp: i0.ɵɵComponentDefWithMeta<SignaturePad, \"signature-pad\", never, { \"options\": \"options\"; }, { \"onBeginEvent\": \"onBeginEvent\"; \"onEndEvent\": \"onEndEvent\"; }, never, never>;\r\n}\r\n"]}
+# \ No newline at end of file
